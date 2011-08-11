@@ -92,6 +92,12 @@ static inline void delay(unsigned long loops)
 			  "bne 1b":"=r" (loops):"0"(loops));
 }
 
+void udelay (unsigned long usecs)
+{
+        delay(usecs);
+}
+
+
 /*****************************************
  * Routine: board_init
  * Description: Early hardware init.
@@ -934,3 +940,10 @@ int nand_init(void)
 /* optionally do something like blinking LED */
 void board_hang (void)
 { while (0) {};}
+
+/******************************************************************************
+ * Dummy function to handle errors for EABI incompatibility
+ *****************************************************************************/
+void raise(void)
+{
+}
