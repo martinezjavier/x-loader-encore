@@ -177,7 +177,7 @@ omap3621_boxer_config :    unconfig
 	@./mkconfig $(@:_config=) arm omap3 omap3621_boxer;
 
 omap3encore_config :    unconfig
-	@./mkconfig $(@:_config=) arm omap3 omap3621_boxer;
+	@./mkconfig $(@:_config=) arm omap3 omap3encore;
 
 omap3430labrador_config :    unconfig
 	@./mkconfig $(@:_config=) arm omap3 omap3430labrador
